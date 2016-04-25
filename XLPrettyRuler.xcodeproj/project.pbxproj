@@ -15,6 +15,8 @@
 		426655251CCDCA4400457301 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426655231CCDCA4400457301 /* LaunchScreen.storyboard */; };
 		426655301CCDCA4500457301 /* XLPrettyRulerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4266552F1CCDCA4500457301 /* XLPrettyRulerTests.m */; };
 		4266553B1CCDCA4500457301 /* XLPrettyRulerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4266553A1CCDCA4500457301 /* XLPrettyRulerUITests.m */; };
+		426655671CCDCAB800457301 /* XLPrettyRuler.m in Sources */ = {isa = PBXBuildFile; fileRef = 426655641CCDCAB800457301 /* XLPrettyRuler.m */; };
+		426655681CCDCAB800457301 /* XLRulerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 426655661CCDCAB800457301 /* XLRulerScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		426655361CCDCA4500457301 /* XLPrettyRulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLPrettyRulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4266553A1CCDCA4500457301 /* XLPrettyRulerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLPrettyRulerUITests.m; sourceTree = "<group>"; };
 		4266553C1CCDCA4500457301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		426655631CCDCAB800457301 /* XLPrettyRuler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPrettyRuler.h; sourceTree = "<group>"; };
+		426655641CCDCAB800457301 /* XLPrettyRuler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPrettyRuler.m; sourceTree = "<group>"; };
+		426655651CCDCAB800457301 /* XLRulerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLRulerScrollView.h; sourceTree = "<group>"; };
+		426655661CCDCAB800457301 /* XLRulerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLRulerScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 		426655141CCDCA4400457301 /* XLPrettyRuler */ = {
 			isa = PBXGroup;
 			children = (
+				426655621CCDCAB800457301 /* XLPrettyRulerView */,
 				426655181CCDCA4400457301 /* AppDelegate.h */,
 				426655191CCDCA4400457301 /* AppDelegate.m */,
 				4266551B1CCDCA4400457301 /* ViewController.h */,
@@ -138,6 +145,17 @@
 				4266553C1CCDCA4500457301 /* Info.plist */,
 			);
 			path = XLPrettyRulerUITests;
+			sourceTree = "<group>";
+		};
+		426655621CCDCAB800457301 /* XLPrettyRulerView */ = {
+			isa = PBXGroup;
+			children = (
+				426655631CCDCAB800457301 /* XLPrettyRuler.h */,
+				426655641CCDCAB800457301 /* XLPrettyRuler.m */,
+				426655651CCDCAB800457301 /* XLRulerScrollView.h */,
+				426655661CCDCAB800457301 /* XLRulerScrollView.m */,
+			);
+			path = XLPrettyRulerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,8 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				426655671CCDCAB800457301 /* XLPrettyRuler.m in Sources */,
 				4266551D1CCDCA4400457301 /* ViewController.m in Sources */,
 				4266551A1CCDCA4400457301 /* AppDelegate.m in Sources */,
+				426655681CCDCAB800457301 /* XLRulerScrollView.m in Sources */,
 				426655171CCDCA4400457301 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
