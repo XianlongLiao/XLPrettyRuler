@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		426655171CCDCA4400457301 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 426655161CCDCA4400457301 /* main.m */; };
+		4266551A1CCDCA4400457301 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 426655191CCDCA4400457301 /* AppDelegate.m */; };
+		4266551D1CCDCA4400457301 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4266551C1CCDCA4400457301 /* ViewController.m */; };
+		426655201CCDCA4400457301 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4266551E1CCDCA4400457301 /* Main.storyboard */; };
+		426655221CCDCA4400457301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426655211CCDCA4400457301 /* Assets.xcassets */; };
+		426655251CCDCA4400457301 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426655231CCDCA4400457301 /* LaunchScreen.storyboard */; };
+		426655301CCDCA4500457301 /* XLPrettyRulerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4266552F1CCDCA4500457301 /* XLPrettyRulerTests.m */; };
+		4266553B1CCDCA4500457301 /* XLPrettyRulerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4266553A1CCDCA4500457301 /* XLPrettyRulerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4266552C1CCDCA4500457301 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4266550A1CCDCA4400457301 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 426655111CCDCA4400457301;
+			remoteInfo = XLPrettyRuler;
+		};
+		426655371CCDCA4500457301 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4266550A1CCDCA4400457301 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 426655111CCDCA4400457301;
+			remoteInfo = XLPrettyRuler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		426655121CCDCA4400457301 /* XLPrettyRuler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLPrettyRuler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		426655161CCDCA4400457301 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		426655181CCDCA4400457301 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		426655191CCDCA4400457301 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4266551B1CCDCA4400457301 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4266551C1CCDCA4400457301 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4266551F1CCDCA4400457301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		426655211CCDCA4400457301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		426655241CCDCA4400457301 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		426655261CCDCA4400457301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4266552B1CCDCA4500457301 /* XLPrettyRulerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLPrettyRulerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4266552F1CCDCA4500457301 /* XLPrettyRulerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLPrettyRulerTests.m; sourceTree = "<group>"; };
+		426655311CCDCA4500457301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		426655361CCDCA4500457301 /* XLPrettyRulerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XLPrettyRulerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4266553A1CCDCA4500457301 /* XLPrettyRulerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLPrettyRulerUITests.m; sourceTree = "<group>"; };
+		4266553C1CCDCA4500457301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4266550F1CCDCA4400457301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		426655281CCDCA4500457301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		426655331CCDCA4500457301 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		426655091CCDCA4400457301 = {
+			isa = PBXGroup;
+			children = (
+				426655141CCDCA4400457301 /* XLPrettyRuler */,
+				4266552E1CCDCA4500457301 /* XLPrettyRulerTests */,
+				426655391CCDCA4500457301 /* XLPrettyRulerUITests */,
+				426655131CCDCA4400457301 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		426655131CCDCA4400457301 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				426655121CCDCA4400457301 /* XLPrettyRuler.app */,
+				4266552B1CCDCA4500457301 /* XLPrettyRulerTests.xctest */,
+				426655361CCDCA4500457301 /* XLPrettyRulerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		426655141CCDCA4400457301 /* XLPrettyRuler */ = {
+			isa = PBXGroup;
+			children = (
+				426655181CCDCA4400457301 /* AppDelegate.h */,
+				426655191CCDCA4400457301 /* AppDelegate.m */,
+				4266551B1CCDCA4400457301 /* ViewController.h */,
+				4266551C1CCDCA4400457301 /* ViewController.m */,
+				4266551E1CCDCA4400457301 /* Main.storyboard */,
+				426655211CCDCA4400457301 /* Assets.xcassets */,
+				426655231CCDCA4400457301 /* LaunchScreen.storyboard */,
+				426655261CCDCA4400457301 /* Info.plist */,
+				426655151CCDCA4400457301 /* Supporting Files */,
+			);
+			path = XLPrettyRuler;
+			sourceTree = "<group>";
+		};
+		426655151CCDCA4400457301 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				426655161CCDCA4400457301 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4266552E1CCDCA4500457301 /* XLPrettyRulerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4266552F1CCDCA4500457301 /* XLPrettyRulerTests.m */,
+				426655311CCDCA4500457301 /* Info.plist */,
+			);
+			path = XLPrettyRulerTests;
+			sourceTree = "<group>";
+		};
+		426655391CCDCA4500457301 /* XLPrettyRulerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4266553A1CCDCA4500457301 /* XLPrettyRulerUITests.m */,
+				4266553C1CCDCA4500457301 /* Info.plist */,
+			);
+			path = XLPrettyRulerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		426655111CCDCA4400457301 /* XLPrettyRuler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4266553F1CCDCA4500457301 /* Build configuration list for PBXNativeTarget "XLPrettyRuler" */;
+			buildPhases = (
+				4266550E1CCDCA4400457301 /* Sources */,
+				4266550F1CCDCA4400457301 /* Frameworks */,
+				426655101CCDCA4400457301 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XLPrettyRuler;
+			productName = XLPrettyRuler;
+			productReference = 426655121CCDCA4400457301 /* XLPrettyRuler.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4266552A1CCDCA4500457301 /* XLPrettyRulerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 426655421CCDCA4500457301 /* Build configuration list for PBXNativeTarget "XLPrettyRulerTests" */;
+			buildPhases = (
+				426655271CCDCA4500457301 /* Sources */,
+				426655281CCDCA4500457301 /* Frameworks */,
+				426655291CCDCA4500457301 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4266552D1CCDCA4500457301 /* PBXTargetDependency */,
+			);
+			name = XLPrettyRulerTests;
+			productName = XLPrettyRulerTests;
+			productReference = 4266552B1CCDCA4500457301 /* XLPrettyRulerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		426655351CCDCA4500457301 /* XLPrettyRulerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 426655451CCDCA4500457301 /* Build configuration list for PBXNativeTarget "XLPrettyRulerUITests" */;
+			buildPhases = (
+				426655321CCDCA4500457301 /* Sources */,
+				426655331CCDCA4500457301 /* Frameworks */,
+				426655341CCDCA4500457301 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				426655381CCDCA4500457301 /* PBXTargetDependency */,
+			);
+			name = XLPrettyRulerUITests;
+			productName = XLPrettyRulerUITests;
+			productReference = 426655361CCDCA4500457301 /* XLPrettyRulerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4266550A1CCDCA4400457301 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "先龙 廖";
+				TargetAttributes = {
+					426655111CCDCA4400457301 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					4266552A1CCDCA4500457301 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 426655111CCDCA4400457301;
+					};
+					426655351CCDCA4500457301 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 426655111CCDCA4400457301;
+					};
+				};
+			};
+			buildConfigurationList = 4266550D1CCDCA4400457301 /* Build configuration list for PBXProject "XLPrettyRuler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 426655091CCDCA4400457301;
+			productRefGroup = 426655131CCDCA4400457301 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				426655111CCDCA4400457301 /* XLPrettyRuler */,
+				4266552A1CCDCA4500457301 /* XLPrettyRulerTests */,
+				426655351CCDCA4500457301 /* XLPrettyRulerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		426655101CCDCA4400457301 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426655251CCDCA4400457301 /* LaunchScreen.storyboard in Resources */,
+				426655221CCDCA4400457301 /* Assets.xcassets in Resources */,
+				426655201CCDCA4400457301 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		426655291CCDCA4500457301 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		426655341CCDCA4500457301 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4266550E1CCDCA4400457301 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4266551D1CCDCA4400457301 /* ViewController.m in Sources */,
+				4266551A1CCDCA4400457301 /* AppDelegate.m in Sources */,
+				426655171CCDCA4400457301 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		426655271CCDCA4500457301 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				426655301CCDCA4500457301 /* XLPrettyRulerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		426655321CCDCA4500457301 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4266553B1CCDCA4500457301 /* XLPrettyRulerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4266552D1CCDCA4500457301 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 426655111CCDCA4400457301 /* XLPrettyRuler */;
+			targetProxy = 4266552C1CCDCA4500457301 /* PBXContainerItemProxy */;
+		};
+		426655381CCDCA4500457301 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 426655111CCDCA4400457301 /* XLPrettyRuler */;
+			targetProxy = 426655371CCDCA4500457301 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4266551E1CCDCA4400457301 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4266551F1CCDCA4400457301 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		426655231CCDCA4400457301 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				426655241CCDCA4400457301 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4266553D1CCDCA4500457301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4266553E1CCDCA4500457301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		426655401CCDCA4500457301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XLPrettyRuler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xianlong.liao.XLPrettyRuler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		426655411CCDCA4500457301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = XLPrettyRuler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xianlong.liao.XLPrettyRuler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		426655431CCDCA4500457301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = XLPrettyRulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xianlong.liao.XLPrettyRulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XLPrettyRuler.app/XLPrettyRuler";
+			};
+			name = Debug;
+		};
+		426655441CCDCA4500457301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = XLPrettyRulerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xianlong.liao.XLPrettyRulerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XLPrettyRuler.app/XLPrettyRuler";
+			};
+			name = Release;
+		};
+		426655461CCDCA4500457301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = XLPrettyRulerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xianlong.liao.XLPrettyRulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XLPrettyRuler;
+			};
+			name = Debug;
+		};
+		426655471CCDCA4500457301 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = XLPrettyRulerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = xianlong.liao.XLPrettyRulerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = XLPrettyRuler;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4266550D1CCDCA4400457301 /* Build configuration list for PBXProject "XLPrettyRuler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4266553D1CCDCA4500457301 /* Debug */,
+				4266553E1CCDCA4500457301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4266553F1CCDCA4500457301 /* Build configuration list for PBXNativeTarget "XLPrettyRuler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				426655401CCDCA4500457301 /* Debug */,
+				426655411CCDCA4500457301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		426655421CCDCA4500457301 /* Build configuration list for PBXNativeTarget "XLPrettyRulerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				426655431CCDCA4500457301 /* Debug */,
+				426655441CCDCA4500457301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		426655451CCDCA4500457301 /* Build configuration list for PBXNativeTarget "XLPrettyRulerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				426655461CCDCA4500457301 /* Debug */,
+				426655471CCDCA4500457301 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4266550A1CCDCA4400457301 /* Project object */;
+}
