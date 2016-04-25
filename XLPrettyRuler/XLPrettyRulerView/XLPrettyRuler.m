@@ -33,15 +33,15 @@
                                  endCount:(NSInteger)endCount
                                   average:(NSNumber *)average
                              currentValue:(CGFloat)currentValue
-                             bigRulerMode:(BOOL)bigRulerMode
+                             averageStyle:(RulerAverageStyle)averageStyle
 {
     [self showRulerScrollViewWithStartCount:startCount
                                    endCount:endCount
                                     average:average
                                currentValue:currentValue
-                              distanceValue:bigRulerMode ? 40.f : 8.f
-                  distanceLeftAndRightSpace:bigRulerMode ? 40.f : 8.f
-                               bigRulerMode:bigRulerMode];
+                              distanceValue:0
+                  distanceLeftAndRightSpace:0
+                               averageStyle:averageStyle];
 }
 
 - (void)showRulerScrollViewWithStartCount:(NSInteger)startCount
@@ -50,13 +50,13 @@
                              currentValue:(CGFloat)currentValue
                             distanceValue:(CGFloat)distanceValue
                 distanceLeftAndRightSpace:(CGFloat)distanceLeftAndRightSpace
-                             bigRulerMode:(BOOL)bigRulerMode
+                             averageStyle:(RulerAverageStyle)averageStyle
 {
+    self.rulerScrollView.averageStyle = averageStyle;
     self.rulerScrollView.rulerAverage = average;
     self.rulerScrollView.rulerStartCount = startCount;
     self.rulerScrollView.rulerEndCount = endCount;
     self.rulerScrollView.rulerValue = currentValue;
-    self.rulerScrollView.bigRulerMode = bigRulerMode;
     if (distanceValue > self.rulerScrollView.distanceValue) {
         self.rulerScrollView.distanceValue = distanceValue;
     }
@@ -87,15 +87,10 @@
     } else if (ruleValue > scrollView.rulerEndCount) {
         return;
     }
-    if (scrollView.bigRulerMode) {
-        ruleValue = [self notRounding:ruleValue afterPoint:1];
+    if ([self valueIsInteger:scrollView.rulerAverage]) {
+        ruleValue = [self notRounding:ruleValue afterPoint:0];
     }else {
-        if ([self valueIsInteger:scrollView.rulerAverage]) {
-            ruleValue = [self notRounding:ruleValue afterPoint:0];
-        }
-        else {
-            ruleValue = [self notRounding:ruleValue afterPoint:1];
-        }
+        ruleValue = [self notRounding:ruleValue afterPoint:1];
     }
     if (self.rulerDeletate && [self.rulerDeletate respondsToSelector:@selector(txhRrettyRuler:prettyRulerView:)]) {
         scrollView.rulerValue = ruleValue;
@@ -117,15 +112,11 @@
 #ifdef DEBUG
     NSLog(@"ago*****************ago:oX:%f",oX);
 #endif
-    if (scrollView.bigRulerMode) {
+    if ([self valueIsInteger:scrollView.rulerAverage]) {
+        oX = [self notRounding:oX afterPoint:0];
+    }
+    else {
         oX = [self notRounding:oX afterPoint:1];
-    }else {
-        if ([self valueIsInteger:scrollView.rulerAverage]) {
-            oX = [self notRounding:oX afterPoint:0];
-        }
-        else {
-            oX = [self notRounding:oX afterPoint:1];
-        }
     }
 #ifdef DEBUG
     NSLog(@"after*****************after:oX:%.1f",oX);
@@ -197,7 +188,7 @@
     ouncesDecimal = [[NSDecimalNumber alloc]initWithFloat:price];
     roundedOunces = [ouncesDecimal decimalNumberByRoundingAccordingToBehavior:roundingBehavior];
     CGFloat resultValue = [roundedOunces floatValue];
-    if (self.rulerScrollView.bigRulerMode && ![self valueIsInteger:self.rulerScrollView.rulerAverage]) {
+    if (self.rulerScrollView.averageStyle == RulerAverageStyleTwo && ![self valueIsInteger:self.rulerScrollView.rulerAverage]) {
         CGFloat decimal = resultValue - (int)resultValue;
         int decimalValue = decimal / ([self.rulerScrollView.rulerAverage floatValue] / 2);
         if (decimalValue < 1) {

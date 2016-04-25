@@ -36,7 +36,7 @@
                                  endCount:(NSInteger)endCount
                                   average:(NSNumber *)average
                              currentValue:(CGFloat)currentValue
-                             bigRulerMode:(BOOL)bigRulerMode;
+                             averageStyle:(RulerAverageStyle)averageStyle;
 
 
 - (void)showRulerScrollViewWithStartCount:(NSInteger)startCount
@@ -45,5 +45,5 @@
                              currentValue:(CGFloat)currentValue
                             distanceValue:(CGFloat)distanceValue
                 distanceLeftAndRightSpace:(CGFloat)distanceLeftAndRightSpace
-                             bigRulerMode:(BOOL)bigRulerMode;
+                             averageStyle:(RulerAverageStyle)averageStyle;
 @end

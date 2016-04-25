@@ -8,6 +8,12 @@
 
 #import "XLRulerScrollView.h"
 
+@interface XLRulerScrollView ()
+
+@property (nonatomic, assign) NSInteger averageNum;
+
+@end
+
 @implementation XLRulerScrollView
 
 - (id)init
@@ -18,6 +24,24 @@
         self.distanceLeftAndRightSpace = 8.f;
     }
     return self;
+}
+
+- (void)setAverageStyle:(RulerAverageStyle)averageStyle
+{
+    _averageStyle = averageStyle;
+    if (_averageStyle == RulerAverageStyleTen) {
+        self.averageNum = 10;
+        _distanceValue = 8.f;
+        _distanceLeftAndRightSpace = 8.f;
+    }else if (_averageStyle == RulerAverageStyleFive) {
+        self.averageNum = 5;
+        _distanceValue = 16.f;
+        _distanceLeftAndRightSpace = 16.f;
+    }else {
+        self.averageNum = 2;
+        _distanceValue = 40.f;
+        _distanceLeftAndRightSpace = 40.f;
+    }
 }
 
 - (void)setRulerValue:(CGFloat)rulerValue {
@@ -41,12 +65,58 @@
     shapeLayer2.lineWidth = 1.f;
     shapeLayer2.lineCap = kCALineCapButt;
     
-    NSInteger offsetNumber = self.bigRulerMode ? DISTANCE_OFFSET_NUMBER_BIG : DISTANCE_OFFSET_NUMBER_SMALL;
+    NSInteger offsetNumber = self.averageStyle == RulerAverageStyleTwo ? DISTANCE_OFFSET_NUMBER_SMALL : DISTANCE_OFFSET_NUMBER_BIG;
     NSInteger count = (self.rulerEndCount - self.rulerStartCount) / [self.rulerAverage floatValue];
     for (NSInteger i = -offsetNumber; i <= count + offsetNumber; i++) {
         
-        if (self.bigRulerMode) {
-            if (i % 2 == 0) {
+        if (self.averageStyle == RulerAverageStyleTen) {
+            if (i % self.averageNum == 0) {
+                CGPathMoveToPoint(pathRef2, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i , 0);
+                CGPathAddLineToPoint(pathRef2, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i, self.rulerHeight - DISTANCE_TEXT_HEIGHT);
+                
+                //文字
+                if (i >= 0 && i <= count) {
+                    UILabel *rule = [[UILabel alloc] init];
+                    rule.textColor = [UIColor blackColor];
+                    rule.text = [NSString stringWithFormat:@"%.0f", self.rulerStartCount + i * [self.rulerAverage floatValue]];
+                    CGSize textSize = [rule.text sizeWithAttributes:@{ NSFontAttributeName : rule.font}];
+                    rule.frame = CGRectMake(self.distanceLeftAndRightSpace + self.distanceValue * i - textSize.width / 2, self.rulerHeight - textSize.height, 0, 0);
+                    [rule sizeToFit];
+                    [self addSubview:rule];
+                }
+            }
+            else if (i % (self.averageNum / 2) == 0) {
+                CGPathMoveToPoint(pathRef1, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i , 0);
+                CGPathAddLineToPoint(pathRef1, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i, self.rulerHeight - DISTANCE_TEXT_HEIGHT - 5);
+            }
+            else
+            {
+                CGPathMoveToPoint(pathRef1, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i , 0);
+                CGPathAddLineToPoint(pathRef1, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i, self.rulerHeight - DISTANCE_TEXT_HEIGHT - 10);
+            }
+        }else if (self.averageStyle == RulerAverageStyleFive) {
+            if (i % self.averageNum == 0) {
+                CGPathMoveToPoint(pathRef2, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i , 0);
+                CGPathAddLineToPoint(pathRef2, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i, self.rulerHeight - DISTANCE_TEXT_HEIGHT);
+                
+                //文字
+                if (i >= 0 && i <= count) {
+                    UILabel *rule = [[UILabel alloc] init];
+                    rule.textColor = [UIColor blackColor];
+                    rule.text = [NSString stringWithFormat:@"%.0f", self.rulerStartCount + i * [self.rulerAverage floatValue]];
+                    CGSize textSize = [rule.text sizeWithAttributes:@{ NSFontAttributeName : rule.font}];
+                    rule.frame = CGRectMake(self.distanceLeftAndRightSpace + self.distanceValue * i - textSize.width / 2, self.rulerHeight - textSize.height, 0, 0);
+                    [rule sizeToFit];
+                    [self addSubview:rule];
+                }
+            }
+            else
+            {
+                CGPathMoveToPoint(pathRef1, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i , 0);
+                CGPathAddLineToPoint(pathRef1, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i, self.rulerHeight - DISTANCE_TEXT_HEIGHT - 10);
+            }
+        }else {
+            if (i % self.averageNum == 0) {
                 CGPathMoveToPoint(pathRef2, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i , 0);
                 CGPathAddLineToPoint(pathRef2, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i, self.rulerHeight - DISTANCE_TEXT_HEIGHT);
                 
@@ -63,32 +133,6 @@
             }else {
                 CGPathMoveToPoint(pathRef1, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i , 0);
                 CGPathAddLineToPoint(pathRef1, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i, self.rulerHeight - DISTANCE_TEXT_HEIGHT - 5);
-            }
-        }else {
-            if (i % 10 == 0) {
-                CGPathMoveToPoint(pathRef2, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i , 0);
-                CGPathAddLineToPoint(pathRef2, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i, self.rulerHeight - DISTANCE_TEXT_HEIGHT);
-                
-                //文字
-                if (i >= 0 && i <= count) {
-                    UILabel *rule = [[UILabel alloc] init];
-                    rule.textColor = [UIColor blackColor];
-                    rule.text = [NSString stringWithFormat:@"%.0f", self.rulerStartCount + i * [self.rulerAverage floatValue]];
-                    CGSize textSize = [rule.text sizeWithAttributes:@{ NSFontAttributeName : rule.font}];
-                    rule.frame = CGRectMake(self.distanceLeftAndRightSpace + self.distanceValue * i - textSize.width / 2, self.rulerHeight - textSize.height, 0, 0);
-                    [rule sizeToFit];
-                    [self addSubview:rule];
-                    NSLog(@"frame:%@", NSStringFromCGRect(rule.frame));
-                }
-            }
-            else if (i % 5 == 0) {
-                CGPathMoveToPoint(pathRef1, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i , 0);
-                CGPathAddLineToPoint(pathRef1, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i, self.rulerHeight - DISTANCE_TEXT_HEIGHT - 5);
-            }
-            else
-            {
-                CGPathMoveToPoint(pathRef1, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i , 0);
-                CGPathAddLineToPoint(pathRef1, NULL, self.distanceLeftAndRightSpace + self.distanceValue * i, self.rulerHeight - DISTANCE_TEXT_HEIGHT - 10);
             }
         }
     }
