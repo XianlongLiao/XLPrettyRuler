@@ -435,7 +435,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: xing su (475625H752)";
 				INFOPLIST_FILE = XLPrettyRuler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xianlong.liao.XLPrettyRuler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -446,7 +448,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: xing su (475625H752)";
 				INFOPLIST_FILE = XLPrettyRuler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xianlong.liao.XLPrettyRuler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,6 +522,7 @@
 				426655411CCDCA4500457301 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		426655421CCDCA4500457301 /* Build configuration list for PBXNativeTarget "XLPrettyRulerTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +531,7 @@
 				426655441CCDCA4500457301 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		426655451CCDCA4500457301 /* Build configuration list for PBXNativeTarget "XLPrettyRulerUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +540,7 @@
 				426655471CCDCA4500457301 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

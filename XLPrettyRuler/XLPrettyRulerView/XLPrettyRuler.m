@@ -22,7 +22,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor clearColor];
         self.rulerScrollView.rulerHeight = frame.size.height;
         self.rulerScrollView.rulerWidth = frame.size.width;
     }
@@ -163,7 +163,7 @@
     CAShapeLayer *shapeLayerLine = [CAShapeLayer layer];
     shapeLayerLine.strokeColor = [UIColor redColor].CGColor;
     shapeLayerLine.fillColor = INDICATORCOLOR;
-    shapeLayerLine.lineWidth = 1.f;
+    shapeLayerLine.lineWidth = 3.f;
     shapeLayerLine.lineCap = kCALineCapSquare;
     
     NSUInteger ruleHeight = 20; // 文字高度

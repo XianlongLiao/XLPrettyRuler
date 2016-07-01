@@ -20,6 +20,8 @@
     XLPrettyRuler *ruler3;
 }
 
+@property (weak, nonatomic) IBOutlet XLPrettyRuler *ruler4;
+
 @end
 
 @implementation ViewController
@@ -64,7 +66,7 @@
     ruler3.rulerDeletate = self;
     [ruler3 showRulerScrollViewWithStartCount:1930 endCount:2016 average:@(1) currentValue:1991 averageStyle:RulerAverageStyleFive];
     [self.view addSubview:ruler3];
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
