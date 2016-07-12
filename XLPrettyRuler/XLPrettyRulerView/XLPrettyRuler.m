@@ -66,13 +66,14 @@
     [self.rulerScrollView drawRuler];
     [self addSubview:self.rulerScrollView];
     [self drawRacAndLine];
+    //绘制完成之后再设置delegate，否则骑士4设置会和delegate冲突
+    self.rulerScrollView.delegate = self;
 }
 
 
 - (XLRulerScrollView *)rulerScrollView {
     if (!_rulerScrollView) {
         _rulerScrollView = [[XLRulerScrollView alloc] init];
-        _rulerScrollView.delegate = self;
         _rulerScrollView.showsHorizontalScrollIndicator = NO;
     }
     return _rulerScrollView;
@@ -182,10 +183,10 @@
 #pragma mark - tool method
 
 - (CGFloat)notRounding:(CGFloat)price afterPoint:(NSInteger)position {
-    NSDecimalNumberHandler*roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:position raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:NO];
+    NSDecimalNumberHandler *roundingBehavior = [NSDecimalNumberHandler decimalNumberHandlerWithRoundingMode:NSRoundPlain scale:position raiseOnExactness:NO raiseOnOverflow:NO raiseOnUnderflow:NO raiseOnDivideByZero:NO];
     NSDecimalNumber*ouncesDecimal;
     NSDecimalNumber*roundedOunces;
-    ouncesDecimal = [[NSDecimalNumber alloc]initWithFloat:price];
+    ouncesDecimal = [[NSDecimalNumber alloc] initWithFloat:price];
     roundedOunces = [ouncesDecimal decimalNumberByRoundingAccordingToBehavior:roundingBehavior];
     CGFloat resultValue = [roundedOunces floatValue];
     if (self.rulerScrollView.averageStyle == RulerAverageStyleTwo && ![self valueIsInteger:self.rulerScrollView.rulerAverage]) {

@@ -147,6 +147,7 @@
     
     UIEdgeInsets edge = UIEdgeInsetsMake(0, self.rulerWidth / 2.f - self.distanceLeftAndRightSpace, 0, self.rulerWidth / 2.f - self.distanceLeftAndRightSpace);
     self.contentInset = edge;
+    
     self.contentOffset = CGPointMake(self.distanceValue * ((self.rulerValue - self.rulerStartCount) / [self.rulerAverage floatValue]) - self.rulerWidth + (self.rulerWidth / 2.f + self.distanceLeftAndRightSpace), 0);
     
     self.contentSize = CGSizeMake(count * self.distanceValue + self.distanceLeftAndRightSpace * 2.f, self.rulerHeight);
