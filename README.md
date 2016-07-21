@@ -6,8 +6,7 @@
 可以自定义刻度标准，以及初始值
 
 ####示例:  
-
- ![image](http://github.com/XianlongLiao/XLPrettyRuler/raw/master/F9E6BF9C-9A13-46D5-AA59-0E5CD2637B70.png)
+![XLPrettyRuler](http://github.com/XianlongLiao/XLPrettyRuler/raw/master/F9E6BF9C-9A13-46D5-AA59-0E5CD2637B70.png)
 
 ``` xml
 ###使用方法
