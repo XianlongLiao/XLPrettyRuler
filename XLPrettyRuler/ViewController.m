@@ -28,7 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //10
+    //10个小刻度为一个大单位
     showLabel = [[UILabel alloc] init];
     showLabel.font = [UIFont systemFontOfSize:20.f];
     showLabel.text = @"当前刻度值:20";
@@ -41,7 +41,7 @@
     [ruler showRulerScrollViewWithStartCount:30 endCount:300 average:@(1) currentValue:60 averageStyle:RulerAverageStyleTen];
     [self.view addSubview:ruler];
     
-    //2
+    //2刻度为一个大单位
     showLabel2 = [[UILabel alloc] init];
     showLabel2.font = [UIFont systemFontOfSize:20.f];
     showLabel2.text = @"当前刻度值:1个";
@@ -54,7 +54,7 @@
     [ruler2 showRulerScrollViewWithStartCount:0.5 endCount:10 average:@(.5) currentValue:1 averageStyle:RulerAverageStyleTwo];
     [self.view addSubview:ruler2];
     
-    //5
+    //5个刻度为一个大单位
     showLabel3 = [[UILabel alloc] init];
     showLabel3.font = [UIFont systemFontOfSize:20.f];
     showLabel3.text = @"当前刻度值:1个";
